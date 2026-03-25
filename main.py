@@ -2,10 +2,14 @@
 Example: CrewAI crew with three-layer security gate.
 
 Before running:
-    pip install -r requirements.txt
-    export OPENAI_API_KEY="sk-..."
-    export AGENTID_API_KEY="agentid_sk_..."  # optional, for Layer 2
+    cp .env.example .env
+    # Fill in your API keys in .env
+    uv sync
+    uv run main.py
 """
+
+from dotenv import load_dotenv
+load_dotenv()
 
 from crewai import Agent, Task, Crew
 from security_gate import security_gate

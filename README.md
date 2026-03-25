@@ -24,10 +24,10 @@ Verifies both **runtime identity** and **agent identity** before any crew task r
 ## Quick start
 
 ```bash
-pip install -r requirements.txt
-export OPENAI_API_KEY="sk-..."
-export AGENTID_API_KEY="agentid_sk_..."  # optional, for Layer 2
-python main.py
+cp .env.example .env
+# Fill in your API keys in .env
+uv sync
+uv run main.py
 ```
 
 ## Usage
